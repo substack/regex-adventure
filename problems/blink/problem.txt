@@ -1,21 +1,20 @@
-Implement a custom markdown operator that will translate all text between
-`@@...@@` and into `<blink>...</blink>` tags.
+Створiть аналог методу markdown, який переводиіть весь текст мiж `@@...@@` в текст `<blink>...</blink>`.
 
-For example, `@@whatever@@` becomes `<blink>whatever</blink>`.
+Наприклад, `@@whatever@@` замiняється на `<blink>whatever</blink>`.
 
-In addition to the `@@...@@` operator, your code should support existing markdown
-syntax, including inside `@@...@@` operators.
+Звернiть увагу на те, що markdown дозволяє використовувати конструкцiї `@@...@@` всерединi `@@...@@`. Ви повиннi реалiзувати цю можливiсть.
 
-Your code should accept a string of markdown as input and return a string of
-html output. Here's a template that you can use:
+Ваш код повинен прийняти строку з розмiткою в синтаксисi markdown та повернути строку в html. Ви можете скористатися наступним шаблоном:
 
   module.exports = function (str) {
     /* return html string */
   }
 
-For this task, use the `marked` module: `npm install marked`
+Для цього завдання використовуйте `marked` модуль. Щоб його встановити виконайте команду: `npm install marked`
 
-To verify your solution, run:
+Для того щоб виконати замiну спробуйте метод `.replace()`
 
-  regex-adventure verify solution.js
+Щоб перевiрити ваше рiшення:
+
+  regex-adventure-ua verify solution.js
 

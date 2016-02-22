@@ -1,20 +1,20 @@
 # regex-adventure
 
-Learn regular expressions with this educational workshop.
+Вивчайте регулярнi вирази разом з воркшопом.
 
-# install
+# Встановлення
 
 ```
 $ sudo npm install -g regex-adventure
 ```
 
-Then you will have a `regex-adventure` command:
+Вiдтепер у вас доступна `regex-adventure` команда:
 
 ```
 $ regex-adventure
 ```
 
-To play these levels offline, you'll also want to install:
+Щоб проходити цей воркшоп оффлайн, додайте:
 
 ```
 $ npm install quotemeta marked

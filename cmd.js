@@ -8,8 +8,8 @@ var lessons = [
   { title: 'BEGIN STRING', file: './problems/anchor_start' }, //done
   { title: 'END STRING', file: './problems/anchor_end' }, //done
   { title: 'CHARACTER CLASS', file: './problems/char_class' }, //done
-  { title: 'NEGATED CHARACTER CLASS', file: './problems/negated_char_class' },
-  { title: 'META', file: './problems/meta' },
+  { title: 'NEGATED CHARACTER CLASS', file: './problems/negated_char_class' }, //done
+  { title: 'META', file: './problems/meta' }, //done
   { title: 'QUANTIFIER', file: './problems/quantifier' },
   { title: 'SPLIT', file: './problems/split' },
   { title: 'CAPTURE', file: './problems/capture' },

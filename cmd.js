@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 var adventure = require('adventure')
-var shop = adventure('regex-adventure')
+var shop = adventure('regex-adventure-ua')
 
 var lessons = [
-  { title: 'LITERALLY', file: './problems/literally' },
-  { title: 'ANCHOR START', file: './problems/anchor_start' },
-  { title: 'ANCHOR END', file: './problems/anchor_end' },
-  { title: 'CHARACTER CLASS', file: './problems/char_class' },
+  { title: 'LITERALS', file: './problems/literally' }, //done
+  { title: 'BEGIN STRING', file: './problems/anchor_start' }, //done
+  { title: 'END STRING', file: './problems/anchor_end' }, //done
+  { title: 'CHARACTER CLASS', file: './problems/char_class' }, //done
   { title: 'NEGATED CHARACTER CLASS', file: './problems/negated_char_class' },
   { title: 'META', file: './problems/meta' },
   { title: 'QUANTIFIER', file: './problems/quantifier' },

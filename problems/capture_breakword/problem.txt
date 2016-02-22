@@ -1,23 +1,16 @@
-Just like before, export a module that searches for `x=` followed by a number
-and return the number found after the equal sign.
+Модiфiкуйте модуль так, щоб вiн віконував пошук числа, що йде за пiдстрокою `x=`, але за додадковою умовою: нi перед `x=`, а нi пiсля чiсла не повинно бути ще символiв окрiм пробiла. Тобто, `... x=9 ...` – проходить умову, а `...fx=9...` вже нi.
 
-Unlike before, your solution should only match `x=` when there are no word
-characters immediately before `x=` or immediately after the number to the right
-of the equal sign.
-
-Here's a template that you can use:
+Ви можете скористатися наступним шаблоном:
 
   module.exports = function (str) {
     var m = /...your regex goes here.../.exec(str)
     return m ? m[1] : null
   }
 
-Use `(` and `)` to create a capture group like before.
+Використовуйте `(` та `)` щоб створити групу захвату як i ранiше.
+Також, ви можете використовувати спецсимвол `\b` щоб позначити межi слова.
 
-You can use a special type of anchor, `\b` to match when there is a break in a
-word.
+Щоб перевiрити ваше рiшення:
 
-To verify your solution, run:
-
-  regex-adventure verify solution.js
+  regex-adventure-ua verify solution.js
 

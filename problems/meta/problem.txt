@@ -15,5 +15,5 @@
 
 Щоб перевiрити ваше рiшення:
 
-  regex-adventure verify solution.js
+  regex-adventure-ua verify solution.js
 

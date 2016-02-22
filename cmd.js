@@ -4,17 +4,17 @@ var adventure = require('adventure')
 var shop = adventure('regex-adventure-ua')
 
 var lessons = [
-  { title: 'LITERALS', file: './problems/literally' }, //done
-  { title: 'BEGIN STRING', file: './problems/anchor_start' }, //done
-  { title: 'END STRING', file: './problems/anchor_end' }, //done
-  { title: 'CHARACTER CLASS', file: './problems/char_class' }, //done
-  { title: 'NEGATED CHARACTER CLASS', file: './problems/negated_char_class' }, //done
-  { title: 'META', file: './problems/meta' }, //done
-  { title: 'QUANTIFIER', file: './problems/quantifier' },
-  { title: 'SPLIT', file: './problems/split' },
-  { title: 'CAPTURE', file: './problems/capture' },
-  { title: 'CAPTURE BREAKWORD', file: './problems/capture_breakword' },
-  { title: 'ALTERATION', file: './problems/alteration' },
+  { title: '1 Лiтерали', file: './problems/literally' }, //done
+  { title: '2 Початок строки', file: './problems/anchor_start' }, //done
+  { title: '3 Кiнець строки', file: './problems/anchor_end' }, //done
+  { title: '4 Пiдмножини', file: './problems/char_class' }, //done
+  { title: '5 Заперечення та пiдмножини', file: './problems/negated_char_class' }, //done
+  { title: '6 Метасимволи', file: './problems/meta' }, //done
+  { title: '7 Квантiфiкатори', file: './problems/quantifier' }, //done
+  { title: '8 Роздiлення', file: './problems/split' }, //done
+  { title: '9 Захват', file: './problems/capture' }, //done
+  { title: '10 Захват з пошуком кiнця слова', file: './problems/capture_breakword' }, //done
+  { title: '11 Оператор альтернативи (логiчне або)', file: './problems/alteration' },
   { title: 'QUANTIFIED GROUP', file: './problems/quantified_group' },
   { title: 'QUOTES', file: './problems/quotes' },
   { title: 'BLINK', file: './problems/blink' }

@@ -1,6 +1,6 @@
 {
   "name": "regex-adventure-ua",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "learn regular expressions. Fork and localization https://github.com/substack/regex-adventure",
   "languages": ["ua"],
   "bin": {

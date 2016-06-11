@@ -1,22 +1,16 @@
-var verify = require('adventure-verify')
-var fs = require('fs')
-var path = require('path')
+var ProblemHelper = require('../problem-helper')
 
-exports.problem = fs.createReadStream(path.join(__dirname, 'problem.txt'))
-exports.solution = fs.createReadStream(path.join(__dirname, 'solution.js'))
-
-exports.verify = verify({ modeReset: true }, function (args, t) {
-  t.plan(3)
-  var f = require(path.resolve(args[0]))
-  t.deepEqual(
-    f('one "two three four" five six "seven eight" nine'),
-    ['"two three four"','"seven eight"'],
-    'one "two three four" five six "seven eight" nine'
+module.exports = new ProblemHelper(__dirname, function(userSolution) {
+  userSolution.deepEqual(
+    'one "two three four" five six "seven eight" nine',
+    ['"two three four"','"seven eight"']
   )
-  t.deepEqual(
-    f('"beep boop" whatever "tacos" eleven "eighty"'),
-    ['"beep boop"','"tacos"','"eighty"'],
-    '"beep boop" whatever "tacos" eleven "eighty"'
+  userSolution.deepEqual(
+    '"beep boop" whatever "tacos" eleven "eighty"',
+    ['"beep boop"','"tacos"','"eighty"']
   )
-  t.deepEqual(f('empty ""'), ['""'], 'empty ""')
+  userSolution.deepEqual(
+    'empty ""',
+    ['""']
+  )
 })

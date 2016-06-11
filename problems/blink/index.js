@@ -1,32 +1,10 @@
-var verify = require('adventure-verify')
-var fs = require('fs')
-var path = require('path')
+var ProblemHelper = require('../problem-helper')
 
-exports.problem = fs.createReadStream(path.join(__dirname, 'problem.txt'))
-exports.solution = fs.createReadStream(path.join(__dirname, 'solution.js'))
-
-exports.verify = verify({ modeReset: true }, function (args, t) {
-  t.plan(4)
-  var f = require(path.resolve(args[0]))
-  t.equal(
-    f('@@whatever@@').trim(),
-    '<p><blink>whatever</blink></p>',
-    '@@whatever@@'
-  )
-  t.equal(
-    f('*abc* @@def@@ __ghi__').trim(),
-    '<p><em>abc</em> <blink>def</blink> <strong>ghi</strong></p>',
-    '*abc* @@def@@ __ghi__'
-  )
-  t.equal(
-    f('@@**cool**@@').trim(),
-    '<p><blink><strong>cool</strong></blink></p>',
-    '@@**cool**@@'
-  )
-  t.equal(
-    f('beep @@boop@@ says *the* @@**robot**@@!').trim(),
-    '<p>beep <blink>boop</blink> says <em>the</em>'
-      + ' <blink><strong>robot</strong></blink>!</p>',
-    'beep @@boop@@ says *the* @@**robot**@@!'
+module.exports = new ProblemHelper(__dirname, function(userSolution) {
+  userSolution.equalTrim("@@whatever@@", '<p><blink>whatever</blink></p>')
+  userSolution.equalTrim("*abc* @@def@@ __ghi__", '<p><em>abc</em> <blink>def</blink> <strong>ghi</strong></p>')
+  userSolution.equalTrim("@@**cool**@@", '<p><blink><strong>cool</strong></blink></p>')
+  userSolution.equalTrim("beep @@boop@@ says *the* @@**robot**@@!",
+    '<p>beep <blink>boop</blink> says <em>the</em> <blink><strong>robot</strong></blink>!</p>'
   )
 })

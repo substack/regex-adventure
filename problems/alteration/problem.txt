@@ -1,24 +1,23 @@
-Export a function that takes a string argument and returns whether the string
-starts with `cat`, `dog`, or `robot` followed by a number to the end of the
-string.
+Створiть модуль, що виконує пошук та повертає true в разi, якщо строка починається зi слов `cat`, `dog`, чи `robot`, а далi слiдує чiсло.
 
-Here's a template that you can use:
+Ви можете скористатися наступним шаблоном:
 
   module.exports = function (str) {
     return /.../.test(str)
   }
 
-You can use the alteration operator `|` to solve this adventure.
+Ви можете скористатися оператором `|`, що означеє умову `або`.
 
-The alteration operator matches among possible options:
+Це оператор альтернативи:
+
 
   /xyz|qrs|tuv/.test('tuv') // true
 
-Alteration operators are often seen in capture groups:
+Такий оператор можна використовувати в межах группи:
 
   /0x(ff|00|80)/.test('0x80') // true
 
-To verify your solution, run:
+Щоб перевiрити ваше рiшення:
 
-  regex-adventure verify solution.js
+  regex-adventure-ua verify solution.js
 

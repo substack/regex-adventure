@@ -1,22 +1,20 @@
-Write a module that accepts a string as its argument and returns an array of
-the quoted strings contained in the input. Strings will be quoted with double
-quotes. Your program should include the double quotes in its output.
+Створiть модуль, що отримує строку, та повертає масив зi строк, що були заключенi у подвiйнi лапки. Вихiдний масив має мiстити строки разом iз лапками.
 
-For example, given the string: 'cool "beans" "beep boop" whatever "yay"'
-your program should return: ['"beans"', '"beep boop"', '"yay"']
 
-Here's a template that you can use:
+Наприклад, вхiдна строка: 'cool "beans" "beep boop" whatever "yay"'
+ваша програма повинна повернуті масив: ['"beans"', '"beep boop"', '"yay"']
+
+Ви можете скористатися наступним шаблоном:
 
   module.exports = function (str) {
     return str.match(/.../g)
   }
 
-You can use `str.match(regex)` to return an array string matches for `regex`
-when the `regex` has `/g` flag enabled.
+Ви повиннi використовувати `str.match(regex)` щоб повернути массив для `regex` з флагом `/g`.
 
-Negated character classes may be useful here.
+Вам можуть знадобитися заперечення в регулярних виразах.
 
-To verify your solution, run:
+Щоб перевiрити ваше рiшення:
 
-  regex-adventure verify solution.js
+  regex-adventure-ua verify solution.js
 

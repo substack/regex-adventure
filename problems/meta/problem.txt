@@ -1,21 +1,19 @@
-Export a function that takes a string argument and returns whether the string
-ends with a literal `.` (dot).
+Створiть модуль, що повертає true в разi, якщо передана строка закiнчується на `.` (крапку).
 
-Here's a template that you can use:
+Ви можете скористатися наступним шаблоном:
 
   module.exports = function (str) {
     /* ... */
   }
 
-`.` is normally a special character in a regexp, but you can refer to a literal
-`.` (dot) character by putting a \ (backslash) in front of it.
-
-Whenever you want to refer to a literal one of these characters, you'll need to
-put a `\` before the character:
+`.` зазвичай, це метасимвол регулярного виразу, однак якщо перед крапкою додати обратний слеш \ (backslash), то крапка буде означати звичайну крапку (наприклад, в реченнi).
+Кожного разу, коли вам потрiбно щоб метасимвол означав сам себе:
 
   . * + ? [ ] ( ) ^ $ { } | \
 
-To verify your solution, run:
+додайте перед таким символом `\`.
 
-  regex-adventure verify solution.js
+Щоб перевiрити ваше рiшення:
+
+  regex-adventure-ua verify solution.js
 

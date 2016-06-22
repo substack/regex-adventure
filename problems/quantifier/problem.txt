@@ -1,24 +1,20 @@
-Export a function that takes a filename string as an argument and returns
-whether the entire filename is a sequence of one or more digits followed by
-`.jpg` or `.jpeg`.
+Створiть модуль, що повертає true в разi, якщо передана строка – це iм'я файлу, що мiстить лише цифри в своїй назвi, та закiнчується на `.jpg` або `.jpeg`.
 
-Here's a template that you can use:
+Ви можете скористатися наступним шаблоном:
 
   module.exports = function (str) {
     /* ... */
   }
 
-When you place a quantifier character after a character or character class, that
-character will match a number of times according to the quanitifier operator in
-use.
+Для того, щоб вказати скiльки разiв має повторюватися той чи iнший символ використовують квантифiкатори.
 
-Here are some simple quantifiers:
+Приклади найпростiших квантифiкаторiв:
 
-  *  zero or more times
-  +  one or more times
-  ?  zero or one times
+  *  ноль або бiльше разiв
+  +  хочи б один раз
+  ?  ноль або один раз
 
-To verify your solution, run:
+Щоб перевiрити ваше рiшення:
 
-  regex-adventure verify solution.js
+  regex-adventure-ua verify solution.js
 

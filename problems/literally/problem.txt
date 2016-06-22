@@ -1,28 +1,23 @@
-For our first adventure, create a new file that will receive a string as an
-argument and should return whether the string contains another string,
-"LITERALLY".
+Створiть новий файл з модулем, який приймав би в якостi аругмента строку str та перевiряв чи мiстить ця строка слово "LITERALLY".
 
-Here's a template that you can use:
+Ви можете скористатися цим шаблоном:
 
   module.exports = function (str) {
     /* return whether str contains the string "LITERALLY"
   }
 
-To test for the presence of the string "LITERALLY", you can use a regular
-expression! Regular expressions begin with a `/` and end with another `/`:
+Для того, щоб задати регулярний вираз, помiстiть його мiж вiдкриваючим `/`, та закриваючим `/` символами. Наприклад, наступна строка:
 
   /I am a regular expression!/
 
-Everything between the `/` characters is the regular expression.
+це регулярний вираз.
 
-Regular expressions have a number of methods, but there is a method called
-`.test()` that accepts a string as an argument to test against.
+Регулярнi вирази в javascript це об'єкти, якi моють методи.
+Наприклад, метод `.test()` перевiряє вiдповiднiсть регулярного виразу до строки.
 
-Add `.test()` to the end of a regex to run a test on a regex:
+  /wow/.test('so amaze wow such doge') // поверне true
 
-  /wow/.test('so amaze wow such doge') // returns true or false
+Для проходження цього тесту, запустiть:
 
-To verify your solution, run:
-
-  regex-adventure verify solution.js
+  regex-adventure-ua verify solution.js
 

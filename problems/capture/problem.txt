@@ -1,23 +1,19 @@
-In this adventure, export a module that searches for the string `x=` followed by
-numbers and returns the number found after the equal sign.
+Зараз треба створити модуль, що виконує пошук чісла яке йде за пiдстрокою `x=`, та повертає знайдене чiсло.
 
-Here's a template that you can use:
+Ви можете скористатися наступним шаблоном:
 
   module.exports = function (str) {
     var m = /...your regex goes here.../.exec(str)
     return m ? m[1] : null
   }
 
-Instead of calling `.test()`, we can use `.exec()`, which returns a match
-object. If the regex matched the string, the match object will be populated with
-capture groups.
+Замiсть визову метода `.test()` ми маємо робити визов методу `.exec()`, який повертає знайдений результат. Якщо регулярний вираз спiвпадає зi строкою, то `.exec()` повертає match захваченої групи.
 
-Capture groups are pieces of regex inside of `(` and `)`.
-The text that matches inside the `(` and `)` will be captured and available on
-the match object with square bracket indexes starting from 1 for the leftmost
-group.
+Для того щоб створити групу для захвата в регулярному виразi ви повиннi додати на початку на кiнцi групи круглi дужки `(` та `)`.
 
-To verify your solution, run:
+Текст, що розташовано мiж такими дужками буде захвачено та повернено в якостi резутату виконання методу `.exec()` у виглядi масиву з єлементами починаючи з крайнього лiвого (якщо таких спiвподiнь два або бiльше).
 
-  regex-adventure verify solution.js
+Щоб перевiрити ваше рiшення:
+
+  regex-adventure-ua verify solution.js
 

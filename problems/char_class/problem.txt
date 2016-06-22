@@ -1,26 +1,20 @@
-Write a module that returns true only when the input string starts with a
-lower-case vowel or a digit.
+Створiть модуль, що повертає true в разi, якщо строка починається з малої голосної латинської лiтери або цифри.
 
-Here's a template that you can use:
+Ви можете скористатися наступним шаблоном:
 
   module.exports = function (str) {
     /* return whether str starts with a vowel or a digit */
   }
 
-For this adventure, use a character class anchored to the start of the input.
+Для проходження цього етапу вам знадобляться пiдмножини.
 
-Character classes are lists of characters between square brackets
-live inside square brackets `[...]`. Each character between the `[` and `]`
-characters is a valid potential match for input.
+Символи, що росташованi мiж вiдкриваючими та закриваючими квадратними дужками називають пiдмножина `[...]`. Кожен символ такої пiдмножини буде перевiрятися на спiвпадiння з символами строки для тестування.
+Наприклад, `[abcdexyz]` дає спiвпадiння для кожного символу окремо `a`, `b`, `c`, `d`, `e`, `x`, `y`, чи `z`. Однак, той самий вираз можна записати використовуючи дiапазон символiв (роздiлених знаком `-`): 
+наприклад `[a-exyz]`
 
-For example, `[abcdexyz]` will match `a`, `b`, `c`, `d`, `e`, `x`, `y`, or `z`.
-Sequential ranges can appear in character classes separated by `-`. For example,
-`[abcdexyz]` can be shortened to read `[a-exyz]` or `[a-ex-z]`.
+Чи ви ще пам'ятаєте, що регулярнi вирази починаются, та закiнчуються символами `/`, а для того, щоб протестувати вираз на вiдповiднiсть до строки, використовують методод `.test()`?
 
-Remember from previous adventures that regexes in javascript are defined between
-two `/` characters and they have a `.test()` method.
+Щоб перевiрити ваше рiшення:
 
-To verify your solution, run:
-
-  regex-adventure verify solution.js
+  regex-adventure-ua verify solution.js
 

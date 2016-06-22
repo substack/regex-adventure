@@ -1,13 +1,14 @@
 {
-  "name": "regex-adventure",
-  "version": "1.1.1",
-  "description": "learn regular expressions",
+  "name": "regex-adventure-ua",
+  "version": "1.0.2",
+  "description": "learn regular expressions. Fork and localization https://github.com/substack/regex-adventure",
+  "languages": ["ua"],
   "bin": {
-    "regex-adventure": "cmd.js"
+    "regex-adventure-ua": "cmd.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:substack/regex-adventure.git"
+    "url": "git@github.com:denis-zavgorodny/regex-adventure.git"
   },
   "author": "substack",
   "license": "MIT",

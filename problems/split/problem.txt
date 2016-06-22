@@ -1,18 +1,16 @@
-Strings in javascript have a `.split()` method. `.split()` takes an argument
-that can be a string or a regex.
+Строки в javascript мають метод `.split()`. Цей метод роздiляє строку на частини, та результат повертає у виглядi масиву. Цей метод може приймати в якостi роздiльника строку або регулярний вираз.
 
-Write a module that accepts a string as its argument and returns an array that
-splits the string on commas separated by arbitrary amounts of whitespace.
+Сворiть модуль, що приймає строку, та повертає масив, елементами якого є частини строки, що були роздiленi символамі ` , `(кома з пробiлами на кiнцях)
 
-Here's a template that you can use:
+Ви можете скористатися наступним шаблоном:
 
   module.exports = function (str) {
     return str.split(/* ... your regex goes here ... */)
   }
 
-Remember that `\s` is a shortcut for whitespace characters `[ \t\r\n\f]`.
+Нагадаємо, що `\s` – це скорочення для символу пробiлу `[ \t\r\n\f]`.
 
-To verify your solution, run:
+Щоб перевiрити ваше рiшення:
 
   regex-adventure verify solution.js
 

@@ -6,7 +6,7 @@ exports.problem = fs.createReadStream(path.join(__dirname, 'problem.txt'))
 exports.solution = fs.createReadStream(path.join(__dirname, 'solution.js'))
 
 exports.verify = verify({ modeReset: true }, function (args, t) {
-  t.plan(3)
+  t.plan(4)
   var f = require(path.resolve(args[0]))
   t.deepEqual(
     f('one "two three four" five six "seven eight" nine'),
@@ -19,4 +19,9 @@ exports.verify = verify({ modeReset: true }, function (args, t) {
     '"beep boop" whatever "tacos" eleven "eighty"'
   )
   t.deepEqual(f('empty ""'), ['""'], 'empty ""')
+  t.deepEqual(
+    f('"one + two = three" four five "six * seven = 42" eight nine'),
+    ['"one + two = three"', '"six * seven = 42"'],
+    '"one + two = three" four five "six * seven = 42" eight nine'
+  )
 })

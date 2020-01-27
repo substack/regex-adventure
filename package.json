@@ -12,7 +12,7 @@
   "author": "substack",
   "license": "MIT",
   "dependencies": {
-    "adventure": "^2.10.0",
+    "adventure": "^2.11.1",
     "adventure-verify": "^2.2.0"
   },
   "keywords": [
